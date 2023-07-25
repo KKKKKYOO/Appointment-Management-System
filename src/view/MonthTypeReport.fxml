@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportMonthType">
+   <children>
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports (Month &amp; Type)" />
+      <TableView fx:id="mtTV" layoutX="123.0" layoutY="108.0" prefHeight="262.0" prefWidth="541.0">
+        <columns>
+          <TableColumn fx:id="mtmonthCOL" prefWidth="170.0" text="Month" />
+          <TableColumn fx:id="mttypeCOL" prefWidth="185.0" text="Type" />
+            <TableColumn fx:id="mtcountCOL" prefWidth="185.0" text="Count" />
+        </columns>
+      </TableView>
+      <Button fx:id="mtcontactreportBT" layoutX="450.0" layoutY="406.0" mnemonicParsing="false" onAction="#onActionContactReport" text="Contact Report" />
+      <Button fx:id="mtcountryreportBT" layoutX="564.0" layoutY="406.0" mnemonicParsing="false" onAction="#onActionUserAppoitnmentTypeReport" text="User Appointment Type Report" />
+      <Button fx:id="mtreturnBT" layoutX="774.0" layoutY="22.0" mnemonicParsing="false" onAction="#onActionBack" text="Back" />
+      <Button fx:id="lo" layoutX="830.0" layoutY="22.0" mnemonicParsing="false" onAction="#onActionLogout" text="Logout" />
+      <Label fx:id="totalLB" layoutX="14.0" layoutY="40.0" text="Total: " />
+   </children>
+</AnchorPane>

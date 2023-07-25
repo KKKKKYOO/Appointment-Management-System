@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller = "controller.MainAppt">
+   <children>
+      <Text fx:id="asLB" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Appointment Schedule" />
+      <TableView fx:id="asTV" layoutX="27.0" layoutY="78.0" prefHeight="354.0" prefWidth="852.0">
+        <columns>
+          <TableColumn fx:id="astvapptidCOL" prefWidth="55.0" text="ID" />
+            <TableColumn fx:id="astvtypeCOL" prefWidth="60.0" text="Type" />
+          <TableColumn fx:id="astvtitleCOL" prefWidth="53.0" text="Title" />
+            <TableColumn fx:id="astvlocationCOL" prefWidth="62.0" text="Location" />
+            <TableColumn fx:id="astvcontactCOL" prefWidth="65.0" text="Contact" />
+            <TableColumn fx:id="astvstartdCOL" prefWidth="71.0" text="Start Date" />
+            <TableColumn fx:id="astvenddCOL" prefWidth="61.0" text="End Date" />
+            <TableColumn fx:id="astvstarttCOL" prefWidth="66.0" text="Start Time" />
+            <TableColumn fx:id="astvendtCOL" prefWidth="66.0" text="End Time" />
+            <TableColumn fx:id="astvcidCOL" text="Customer ID" />
+            <TableColumn fx:id="astvuidCOL" prefWidth="55.0" text="User ID" />
+            <TableColumn fx:id="astvdescCOL" prefWidth="206.0" text="Description" />
+        </columns>
+      </TableView>
+      <MenuButton fx:id="as" layoutX="767.0" layoutY="17.0" mnemonicParsing="false" text="Appointments">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#onActionCustomers" text="Customers" />
+          <MenuItem mnemonicParsing="false" onAction="#onActionReports" text="Reports" />
+            <MenuItem mnemonicParsing="false" onAction="#onActionLogout" text="Logout" />
+        </items>
+      </MenuButton>
+      <Button fx:id="asaddBT" layoutX="715.0" layoutY="445.0" mnemonicParsing="false" onAction="#onActionAddAppt" text="Add" />
+      <Button fx:id="asupdateBT" layoutX="767.0" layoutY="445.0" mnemonicParsing="false" onAction="#onActionUpdateAppt" text="Update" />
+      <Button fx:id="asdeleteBT" layoutX="830.0" layoutY="445.0" mnemonicParsing="false" onAction="#onActionDeleteAppt" text="Delete" />
+      <Label layoutX="14.0" layoutY="35.0" text="Time Zone:" />
+      <Label fx:id="astimezoneLB" layoutX="83.0" layoutY="35.0" text="Label" />
+      <RadioButton fx:id="asweeklyRB" layoutX="27.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionViewWeekly" text="WEEKLY">
+         <toggleGroup>
+            <ToggleGroup fx:id="viewTG" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="asmonthlyRB" layoutX="121.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionViewMonthly" text="MONTHLY" toggleGroup="$viewTG" />
+      <RadioButton fx:id="asviewallRB" layoutX="221.0" layoutY="449.0" mnemonicParsing="false" onAction="#onActionViewAll" text="VIEW ALL" toggleGroup="$viewTG" />
+      <DatePicker fx:id="assearchDP" layoutX="341.0" layoutY="445.0" onAction="#onActionSearchApptsByDate" promptText="Query by Date" />
+   </children>
+</AnchorPane>

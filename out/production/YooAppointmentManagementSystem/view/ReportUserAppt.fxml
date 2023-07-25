@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportUserAppt">
+   <children>
+      <ComboBox fx:id="usrCB" layoutX="53.0" layoutY="15.0" onAction="#onActionPopulateTable" prefWidth="150.0" />
+      <Label layoutX="14.0" layoutY="19.0" text="User:" />
+      <TableView fx:id="reportTV" layoutX="23.0" layoutY="125.0" prefHeight="320.0" prefWidth="375.0">
+        <columns>
+          <TableColumn fx:id="typeCOL" prefWidth="194.0" text="Report Type" />
+          <TableColumn fx:id="descCOL" prefWidth="180.0" text="Description" />
+        </columns>
+      </TableView>
+      <Button fx:id="monthtypereportBT" layoutX="23.0" layoutY="458.0" mnemonicParsing="false" onAction="#onActionMonthTypeReport" text="Month Type Report" />
+      <Button fx:id="backBT" layoutX="773.0" layoutY="15.0" mnemonicParsing="false" onAction="#onActionBack" text="Back" />
+      <Button fx:id="contactreportBT" layoutX="153.0" layoutY="458.0" mnemonicParsing="false" onAction="#onActionContactReport" text="Contact Report" />
+      <Button fx:id="logoutBT" layoutX="827.0" layoutY="15.0" mnemonicParsing="false" onAction="#onActionLogout" text="LogOut" />
+      <Label fx:id="totalLB" layoutX="8.0" layoutY="56.0" text="Total: " />
+   </children>
+</AnchorPane>

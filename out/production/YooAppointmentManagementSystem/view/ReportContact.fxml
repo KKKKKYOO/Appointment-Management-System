@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportContact">
+   <children>
+      <Text fx:id="contactLB" layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reports (Contact)" />
+      <TableView fx:id="asTV" layoutX="27.0" layoutY="78.0" prefHeight="354.0" prefWidth="852.0">
+        <columns>
+          <TableColumn fx:id="astvapptidCOL" prefWidth="55.0" text="ID" />
+            <TableColumn fx:id="astvtypeCOL" prefWidth="60.0" text="Type" />
+          <TableColumn fx:id="astvtitleCOL" prefWidth="53.0" text="Title" />
+            <TableColumn fx:id="astvlocationCOL" prefWidth="62.0" text="Location" />
+            <TableColumn fx:id="astvcontactCOL" prefWidth="65.0" text="Contact" />
+            <TableColumn fx:id="astvstartdCOL" prefWidth="75.0" text="Start" />
+            <TableColumn fx:id="astvstarttCOL" text="Time" />
+            <TableColumn fx:id="astvenddCOL" prefWidth="71.0" text="End" />
+            <TableColumn fx:id="astvendtCOL" prefWidth="86.0" text="Time" />
+            <TableColumn fx:id="astvcidCOL" prefWidth="83.0" text="Customer ID" />
+            <TableColumn fx:id="astvuidCOL" minWidth="0.0" prefWidth="71.0" text="User ID" />
+            <TableColumn fx:id="astvdescCOL" prefWidth="90.0" text="Note" />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="35.0" text="Time Zone:" />
+      <Label fx:id="astimezoneLB" layoutX="83.0" layoutY="35.0" text="Label" />
+      <ToggleButton fx:id="monthtypereportBT" layoutX="27.0" layoutY="450.0" mnemonicParsing="false" onAction="#onActionMonthTypeReport" text="Month Type Report" />
+      <Label fx:id="apptcountLB" layoutX="706.0" layoutY="455.0" text="Total Appoitnments:" />
+      <Button fx:id="backBT" layoutX="771.0" layoutY="17.0" mnemonicParsing="false" onAction="#onActionBack" text="Back" />
+      <Button fx:id="logoutBT" layoutX="820.0" layoutY="17.0" mnemonicParsing="false" onAction="#onActionLogout" text="LogOut" />
+      <ComboBox fx:id="contactCB" layoutX="378.0" layoutY="31.0" onAction="#onActionPopulateTable" prefWidth="150.0" promptText="Choose a Contact" />
+      <Label layoutX="315.0" layoutY="36.0" text="Contact:" />
+      <Button fx:id="userappttypereportBT" layoutX="167.0" layoutY="451.0" mnemonicParsing="false" onAction="#onActionUserAppoitnmentTypeReport" text="User Appointment Type Report" />
+   </children>
+</AnchorPane>
